@@ -10,9 +10,13 @@
   <packaging>war</packaging>
   
   <properties>
-    <spring.version>5.1.5.RELEASE</spring.version>
+    <spring.version>5.2.0.RELEASE</spring.version>
     <hibernate.version>5.4.1.Final</hibernate.version>
+    <!-- para forçar o CP1252 para UTF-8 -->
+    <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+    <!-- <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding > -->
   </properties>
+  
   
   <dependencies>
   	<dependency>
@@ -33,7 +37,7 @@
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jpa</artifactId>
-      <version>2.1.5.RELEASE</version>
+      <version>2.2.0.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -43,13 +47,13 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.14</version>
+      <version>8.0.18</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <version>4.0.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -67,6 +71,13 @@
   
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <!-- para a estrada dos arquivos em src 
+    <resources>
+            <resource>
+                <directory>${project.basedir}/src</directory>
+            </resource>
+    </resources> -->
+    
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
